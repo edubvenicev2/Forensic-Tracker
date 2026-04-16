@@ -41,8 +41,25 @@
       display:flex; align-items:center; justify-content:space-between; gap:20px;
       padding: 14px 0;
     }
-    .brand-mini { display:flex; align-items:center; gap:14px; font-weight:800; color:var(--navy); letter-spacing:.02em; }
-    .brand-mini img { width:88px; height:auto; border-radius:10px; }
+    .brand-mini {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+.brand-mini img {
+  width: 120px;
+  height: auto;
+  display: block;
+  flex: 0 0 auto;
+}
+.brand-mini span {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  white-space: nowrap;
+}
     .nav { display:flex; gap:16px; flex-wrap:wrap; }
     .nav a {
       color: var(--muted); text-decoration:none; font-size:14px; font-weight:600;
@@ -205,6 +222,12 @@
       .hero-grid, .grid-2, .role-detail { grid-template-columns: 1fr; }
     }
     @media (max-width: 720px) {
+  .brand-mini img {
+    width: 92px;
+  }
+  .brand-mini span {
+    font-size: 16px;
+  }
       .wrap { width: min(var(--max), calc(100% - 24px)); }
       .nav { display:none; }
       .stat-grid { grid-template-columns: 1fr; }
